@@ -1,0 +1,23 @@
+# Archivos compilados
+*.exe
+*.out
+*.o
+*.obj
+
+# Librerías y archivos intermedios
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# Ejecutable sin extensión (Linux/macOS)
+parte1
+
+# Carpetas de editores
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
