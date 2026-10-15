@@ -11,7 +11,7 @@ bool tieneLongitudMinima(const string& pass) {
 bool tieneMayuscula(const string& pass) {
     for (int i = 0; i < pass.length(); i++) {
         if (pass[i] >= 'A' && pass[i] <= 'Z') {
-            return true;   // con encontrar una basta
+            return true;
         }
     }
     return false;
@@ -37,7 +37,7 @@ bool tieneEspecial(const string& pass) {
     return false;
 }
 
-// ---------- Lógica de puntaje y clasificación ----------
+// ---------- Puntaje y clasificación ----------
 
 int calcularPuntaje(const string& pass) {
     int puntaje = 0;
@@ -56,6 +56,26 @@ string clasificar(int puntaje) {
     return "FUERTE";
 }
 
+// ----------  sugerencias para mejorar ----------
+
+void mostrarSugerencias(const string& pass) {
+    cout << "\nPara hacerla más fuerte:" << endl;
+
+    if (!tieneLongitudMinima(pass)) {
+        cout << " - Usa 8 caracteres o más (te faltan "
+             << 8 - pass.length() << ")" << endl;
+    }
+    if (!tieneMayuscula(pass)) {
+        cout << " - Agrega al menos una letra MAYÚSCULA (A-Z)" << endl;
+    }
+    if (!tieneNumero(pass)) {
+        cout << " - Agrega al menos un número (0-9)" << endl;
+    }
+    if (!tieneEspecial(pass)) {
+        cout << " - Agrega un carácter especial (! @ # $ % & *)" << endl;
+    }
+}
+
 // ---------- Programa principal ----------
 
 int main() {
@@ -68,6 +88,12 @@ int main() {
 
     cout << "Reglas cumplidas: " << puntaje << "/4" << endl;
     cout << "Seguridad: " << clasificar(puntaje) << endl;
+
+    if (puntaje < 4) {
+        mostrarSugerencias(password);
+    } else {
+        cout << "\n¡Excelente! Tu contraseña cumple todas las reglas." << endl;
+    }
 
     return 0;
 }
