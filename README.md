@@ -1,10 +1,10 @@
-# 🔐 Validador de Contraseña Segura en C++
+#  Validador de Contraseña Segura en C++
 
 Programa de consola escrito en C++ que evalúa la fortaleza de una contraseña según 4 reglas de seguridad. Proyecto del ejercicio de ciberseguridad básica: *"construir herramientas básicas de protección"*.
 
 ---
 
-## 📋 Descripción
+##  Descripción
 
 El usuario ingresa una contraseña y el programa verifica cuántas de estas reglas cumple:
 
@@ -55,7 +55,7 @@ g++ --version
 
 ---
 
-## 🚀 Cómo compilar y ejecutar
+##  Cómo compilar y ejecutar
 
 ```bash
 # 1. Clonar el repositorio
@@ -70,26 +70,22 @@ g++ parte1.cpp -o parte1
 parte1.exe        # Windows
 ```
 
-> 💡 **Windows:** si ves caracteres extraños al imprimir "DÉBIL", ejecuta `chcp 65001` antes del programa.
-
----
-
 ## 🧪 Ejemplos de uso
 
 ```
-Ingrese una contraseña: hola
+Ingrese una contraseña: Alfg
 Reglas cumplidas: 0/4
 Seguridad: DÉBIL
 ```
 
 ```
-Ingrese una contraseña: Hola1234
+Ingrese una contraseña: Alfg1234
 Reglas cumplidas: 3/4
 Seguridad: MEDIA
 ```
 
 ```
-Ingrese una contraseña: Hola123!
+Ingrese una contraseña: Alfg123!
 Reglas cumplidas: 4/4
 Seguridad: FUERTE
 ```
@@ -98,10 +94,10 @@ Seguridad: FUERTE
 
 | Contraseña | Reglas | Resultado |
 |------------|--------|-----------|
-| `hola` | 0 | DÉBIL |
+| `Alfg` | 0 | DÉBIL |
 | `Ab1!` | 3 | MEDIA |
-| `Hola1234` | 3 | MEDIA |
-| `Hola123!` | 4 | FUERTE |
+| `Alfg1234` | 3 | MEDIA |
+| `Alfg123!` | 4 | FUERTE |
 
 ---
 
@@ -127,7 +123,7 @@ Seguridad: FUERTE
 ## 👤 Autor
 
 **Tu Nombre**
-GitHub: [@TU_USUARIO](https://github.com/TU_USUARIO)
+GitHub: [algutier46-hub](https://github.com/algutier46-hub)
 
 ---
 
